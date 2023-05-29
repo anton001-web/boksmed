@@ -1,0 +1,185 @@
+.header {
+  background: #fff;
+}
+
+.header-body {
+  padding: 25px 15px;
+}
+
+.header-upperBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    margin-right: 15px;
+  }
+}
+
+.header-upBlock__icons-list {
+  &__item {
+    margin-right: 7px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.header-upBlock__ctlg-btn {
+  color: $base-dark;
+  display: flex;
+  align-items: center;
+  @include fontz('Geometria', 400, 14px);
+  text-transform: uppercase;
+}
+
+.header-ctlg__btn-ico {
+  margin-top: 2px;
+  height: 10px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__line {
+    display: block;
+    background: $base-blue;
+    height: 2px;
+    width: 20px;
+    margin-bottom: 2px;
+
+    &:last-child {
+      margin-bottom: 0px;
+      width: 15px;
+    }
+  }
+}
+
+.header-upBlock__fnd-eqp-inp__wrap {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: inset 0px 0px 3px rgba(50, 87, 164, 0.25);
+  border-radius: 10px;
+  padding: 10px 15px;
+
+  &-ico {
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+  }
+
+  &-inp {
+    color: $base-dark;
+    width: 100%;
+    border: none;
+    outline: none;
+    @include fontz('Geometria', 400, 14px);
+
+    &::placeholder {
+      color: $base-dark;
+    }
+  }
+}
+
+.header-upBlock__clBack-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  @include fontz('Geometria', 400, 14px);
+  color: $base-blue;
+  border-bottom: 1px solid $base-blue;
+
+  &__ico {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+}
+
+.header-upBlock__phone {
+  @include fontz('Geometria', 400, 14px);
+  color: $base-dark;
+}
+
+//////////// bottom part ////////////
+
+.header-bottomBlock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.header-bottomBlock__links-list {
+  display: flex;
+  margin-right: 20px;
+
+  &__item {
+    @include fontz('Geometria', 400, 14px);
+    color: $base-dark;
+    text-decoration: none;
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.header-bottomBlock__adtl-pgs__list {
+  display: flex;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    @include fontz('Geometria', 400, 14px);
+    color: $base-dark;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+#header-bottomBlock__desk-hidden__select {
+  display: none;
+}
+
+.header-bottomBlock__desk-hidden__select {
+  &__control {
+    @include fontz('Geometria', 400, 12px);
+    color: $base-dark;
+    min-height: 10px !important;
+    box-shadow: none !important;
+    border-color: #ccc !important;
+    border: none !important;
+  }
+
+  &__menu {
+    @include fontz('Geometria', 400, 12px);
+    color: $base-dark;
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+  &__indicator {
+    padding: 2px 3px 0px 0px !important;
+  }
+
+  &__value-container {
+    padding: 0 4px !important;
+  }
+
+  &__menu {
+    width: fit-content !important;
+  }
+}

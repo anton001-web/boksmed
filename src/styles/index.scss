@@ -1,0 +1,20 @@
+@import '~scss-reset/reset.css';
+@import 'vars';
+@import 'utils';
+
+@import 'fonts';
+
+@import "header";
+@import "heroSec";
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+body {
+  background: $body-bg;
+}
+
+@import 'adaptive/header-adaptive';
+@import 'adaptive/heroSec-adaptive';

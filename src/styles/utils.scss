@@ -1,0 +1,18 @@
+@mixin fontz($ff, $fw, $fs) {
+  font-family: $ff, sans-serif;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+%title-base {
+  color: $base-blue;
+  @include fontz('Geometria', 500, 24px);
+}
+
+%base-btn {
+  text-transform: lowercase;
+  color: $btn-color;
+  @include fontz('Geometria', 500, 14px);
+  background: $base-blue;
+  box-shadow: 0px 0px 3px #1A3E8B, inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,77 @@
+.hero-section {
+  margin-top: $sts;
+  background: #fff;
+  padding: 0 $default-gap-sides;
+}
+
+.hero-section__swiper {
+  height: 550px;
+}
+
+.hero-section__swiper-slide {
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+    &-rightSide {
+      display: flex;
+      align-items: end;
+    }
+
+    &-leftSide {
+     align-self: center;
+
+      &__img {
+        margin-bottom: 30px;
+      }
+
+      &__title {
+        @include fontz('Geometria', 700, 28px);
+        color: $base-dark;
+        margin-bottom: 25px;
+      }
+
+      &__text {
+        @include fontz('Geometria', 400, 18px);
+        color: $base-dark;
+        margin-bottom: 25px;
+        max-width: 350px;
+        display: block;
+      }
+    }
+  }
+}
+
+.hero-section__swiper-slide__nav {
+  display: flex;
+  align-items: center;
+
+  .hero-section__swiper-slide__navigation-btn {
+    @include fontz('Geometria', 500, 14px);
+    color: #fff;
+    background: #3257A4;
+    box-shadow: 0px 0px 3px #1A3E8B, inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 15px 25px;
+  }
+
+  &-navigation {
+    margin-left: 20px;
+
+    &-slider-btn {
+      border: 1px solid $base-blue;
+      border-radius: 50%;
+      padding: 7px;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.hero-section__swiper-slide__body-leftSide__img {
+  height: 30px;
+}
