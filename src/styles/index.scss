@@ -6,10 +6,15 @@
 
 @import "header";
 @import "heroSec";
+@import "medeqpSec";
 
 .container {
   max-width: 1240px;
   margin: 0 auto;
+}
+
+.title-default {
+  @extend %title-base;
 }
 
 body {
@@ -18,3 +23,4 @@ body {
 
 @import 'adaptive/header-adaptive';
 @import 'adaptive/heroSec-adaptive';
+@import 'adaptive/medeqpSec-adaptive';

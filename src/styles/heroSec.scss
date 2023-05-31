@@ -1,7 +1,12 @@
 .hero-section {
   margin-top: $sts;
-  background: #fff;
   padding: 0 $default-gap-sides;
+
+  &__body {
+    background: #fff;
+    border-radius: 45px;
+    padding: 0 60px;
+  }
 }
 
 .hero-section__swiper {
