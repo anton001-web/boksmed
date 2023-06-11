@@ -1,0 +1,24 @@
+@media screen and (max-width: 996px) {
+  .nvs-body__swiper-prev__btn {
+    left: -8px;
+  }
+
+  .nvs-body__swiper-next__btn {
+    right: -8px;
+  }
+
+  .nvs-body__swiper-slide__body-img__block {
+    align-items: end;
+
+    img {
+      height: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nvs-body__swiper-prev__btn, .nvs-body__swiper-next__btn {
+    padding: 0;
+    border: none;
+  }
+}
