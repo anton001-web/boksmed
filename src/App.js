@@ -5,6 +5,7 @@ import {HeroSection} from "./components/heroSection/HeroSection";
 import {MedeqpSec} from "./components/medeqpSec/MedeqpSec";
 import {NvsSection} from "./components/nvsSection/NvsSection";
 import {BfmSec} from "./components/bfmSec/BfmSec";
+import {LtnsSec} from "./components/ltnsSec/LtnsSec";
 
 export const App = () => {
     return (
@@ -15,6 +16,7 @@ export const App = () => {
                 <MedeqpSec />
                 <NvsSection />
                 <BfmSec />
+                <LtnsSec />
             </CWrap>
         </>
     )

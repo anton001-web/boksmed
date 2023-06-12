@@ -9,6 +9,7 @@
 @import "medeqpSec";
 @import "nvsSec";
 @import "bfmSec";
+@import "ltnsSec";
 
 .container {
   max-width: 1240px;
@@ -28,3 +29,4 @@ body {
 @import 'adaptive/medeqpSec-adaptive';
 @import 'adaptive/nvsSec-adaptive';
 @import 'adaptive/bfmSec-adaptive';
+@import 'adaptive/ltnsSec-adaptive';

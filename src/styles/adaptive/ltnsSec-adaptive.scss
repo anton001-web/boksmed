@@ -1,0 +1,25 @@
+@media screen and (max-width: 996px) {
+  .ltns-list__item-img {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ltns-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item-img {
+      width: 100%;
+      height: 100px;
+    }
+  }
+}
+
+.ltns-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ltns-list__item-img {
+    height: 80px;
+  }
+}

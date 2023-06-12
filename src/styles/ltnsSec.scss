@@ -1,0 +1,60 @@
+.ltns-sec {
+  margin-top: $sts;
+}
+
+.ltns-body {
+  padding: $gap-top $default-gap-sides;
+}
+
+.ltns-list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  &__item {
+    border: 0.2px solid #EFF5FE;
+    box-shadow: 0px 20px 50px rgba(73, 122, 226, 0.2), inset 0px 0px 3px rgba(50, 87, 164, 0.25);
+    border-radius: 15px;
+    padding: 20px;
+
+    &-img {
+      border-radius: 10px;
+    }
+
+    &-ds__block {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-date {
+      color: $base-blue;
+      @include fontz('Geometria', 400, 10px);
+    }
+
+    &-text {
+      color: $base-dark;
+      @include fontz('Geometria', 500, 14px);
+      margin-top: 18px;
+    }
+
+    &-lower__block {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-btn {
+      color: $base-blue;
+      @include fontz('Geometria', 400, 14px);
+    }
+
+    &-author {
+      color: $base-darkRed;
+      @include fontz('Geometria', 400, 10px);
+    }
+  }
+}

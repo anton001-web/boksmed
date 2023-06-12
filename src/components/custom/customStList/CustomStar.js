@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const StarIco = ({id, rateId}) => {
+export const CustomStar = ({id, rateId}) => {
 
     const yColor = '#FFF057'
 

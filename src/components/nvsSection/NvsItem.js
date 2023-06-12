@@ -1,20 +1,14 @@
 import React from 'react'
-import {StarIco} from "./StarIco";
+import {CustomStarList} from "../custom/customStList/CustomStarList";
 
 export const NvsItem = ({slide}) => {
-
-    const rateArr = new Array(5).fill('')
 
     return (
         <div className='nvs-body__swiper-slide__body'>
             <div className='nvs-body__swiper-slide__body-img__block'>
                  <img src={slide.img} alt="item image"/>
                 <div className='nvs-body__swiper-slide__body-rateArr'>
-                    {
-                        rateArr.map((item, ind) => (
-                            <StarIco id={ind+1} key={ind} rateId={slide.rate} />
-                        ))
-                    }
+                    <CustomStarList rate={slide.rate} />
                 </div>
             </div>
             <div className="nvs-body__swiper-slide__body-downBlock">
