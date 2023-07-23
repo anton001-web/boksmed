@@ -8,7 +8,7 @@ export const CustomStarList = ({rate}) => {
         <div className='custom-starList'>
             {
                 starList.map((_, ind) => (
-                    <CustomStar id={ind+1} rateId={rate} />
+                    <CustomStar key={ind} id={ind+1} rateId={rate} />
                 ))
             }
         </div>

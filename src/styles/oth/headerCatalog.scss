@@ -1,0 +1,62 @@
+.header-catalog {
+  min-height: 525px;
+  display: grid;
+  grid-template-columns: min(450px, 500px) 1fr;
+
+  background: #fff;
+  border: 1px solid $base-blue;
+  border-radius: 0 0 45px 45px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: calc(100% + 20px);
+  z-index: 100;
+
+  &__list-wrap {
+    display: flex;
+    flex-direction: column;
+    background: #497AE2;
+    border-radius: 0 0 0 45px;
+  }
+}
+
+.header-catalog__list {
+  margin-top: 80px;
+  //display: flex;
+  //flex-direction: column;
+
+  &-item {
+    transition: all .2s ease;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 40px;
+    @include fontz('Geometria', 500, 18px);
+
+    &[data-active='active'] {
+      color: #355CAC;
+      background: #fff;
+    }
+  }
+}
+
+.header-catalog__variants-wrap {
+  padding: 80px 10px 10px 50px;
+}
+
+.header-catalog__variants-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    cursor: pointer;
+    margin: 15px 0 10px 0;
+    color: $base-dark;
+    @include fontz('Geometria', 400, 16px);
+    transition: color .2s;
+
+    &:hover {
+      color: #355CAC;
+    }
+  }
+}

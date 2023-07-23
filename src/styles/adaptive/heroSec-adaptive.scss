@@ -25,6 +25,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .hero-section__body {
+    padding: 20px 15px;
+  }
+
   .hero-section__swiper {
     height: 100%
   }

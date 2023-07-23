@@ -7,6 +7,7 @@
 }
 
 .header-upperBlock {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,6 +28,8 @@
 }
 
 .header-upBlock__ctlg-btn {
+  cursor: pointer;
+  user-select: none;
   color: $base-dark;
   display: flex;
   align-items: center;
@@ -54,6 +57,10 @@
       width: 15px;
     }
   }
+}
+
+.header-bottomBlock__desk-hidden__select__menu {
+  z-index: 10 !important;
 }
 
 .header-upBlock__fnd-eqp-inp__wrap {
@@ -183,3 +190,4 @@
     width: fit-content !important;
   }
 }
+

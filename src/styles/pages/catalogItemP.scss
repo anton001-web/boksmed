@@ -1,0 +1,230 @@
+.catalog-item__page-body {
+
+}
+
+.catalog-item__page-title {
+  text-align: start;
+  text-transform: capitalize;
+  margin: 50px 0;
+}
+
+.catalog-item__page-header {
+  padding: 50px $default-gap-sides $default-gap-sides $default-gap-sides;
+
+  &__border {
+    margin-top: 15px;
+    width: 500%;
+    height: 2px;
+    background: $base-blue;
+    position: absolute;
+    right: calc((100% - 1410px) / 2);
+  }
+}
+
+.catalog-item__page-deskHidden__filter-btn {
+  border: none;
+  outline: none;
+  @include fontz('Geometria', 400, 14px);
+  color: $base-blue;
+  margin: 0 20px;
+  display: none;
+}
+
+.catalog-item__page-rightF__items {
+  display: flex;
+}
+
+.catalog-item__page-sort {
+  &__select__menu {
+    width: 165px !important;
+    right: 0 !important;
+    color: red !important;
+  }
+}
+
+.catalog-item__page-filter__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog-item__page-sort__dropdown-indicator {
+  margin-top: 3px;
+}
+
+.catalog-item__page-sort {
+  width: max-content;
+  justify-self: end;
+}
+
+.catalog-item__page-sort__select__placeholder {
+  @include fontz('Geometria', 400, 14px);
+  color: $base-dark !important;
+  cursor: pointer !important;
+}
+
+.catalog-item__page-sort__select__control {
+  cursor: pointer !important;
+  @include fontz('Geometria', 400, 14px);
+  color: $base-dark;
+  background: inherit !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+  border: none !important;
+}
+
+.catalog-item__page-sort__select__indicator-separator {
+  display: none !important;
+}
+
+.catalog-item__page-content {
+  max-width: calc(1440px + (100% - 1440px) / 2);
+  display: grid;
+  grid-template-columns: minmax(min-content, 390px) 1fr;
+}
+
+.catalog-item__page-content__goods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content;
+  gap: 20px;
+  padding: 20px 0 0 20px;
+
+  .custom-goods__item {
+    //height: fit-content;
+  }
+}
+
+.catalog-item__page-content__sidebar {
+  background: #fff;
+  padding: 30px 10px 40px 0;
+}
+
+.catalog-item__page-modelsQty {
+  @include fontz('Geometria', 400, 14px);
+}
+
+.catalog-item__page-content__price-range__titles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+
+  &-item {
+    @include fontz('Geometria', 400, 14px);
+    color: $base-dark;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.catalog-item__page-content__price-range__input-wrap {
+  border-radius: 5px;
+  border: .5px solid $base-blue;
+  padding: 5px;
+  height: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.catalog-item__page-content__price-range__input-block {
+  position: relative;
+
+  input {
+    border: none;
+    height: 100%;
+  }
+}
+
+.catalog-item__page-content__price-minRange__input {
+  border-right: 1px solid $base-blue !important;
+  padding-right: 10px;
+
+  &::placeholder {
+    @include fontz('Geometria', 400, 14px);
+    color: $base-dark;
+  }
+}
+
+.catalog-item__page-content__price-maxRange__input {
+  padding-left: 10px;
+
+  &::placeholder {
+    @include fontz('Geometria', 400, 14px);
+    color: $base-dark;
+  }
+}
+
+.catalog-item__page-content__price-range__input-ico {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.catalog-item__page-content__filter-options__list {
+  margin-top: 40px;
+
+  &-item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      @include fontz('Geometria', 400, 14px);
+      color: $base-dark;
+      margin-bottom: 25px;
+      display: block;
+    }
+  }
+}
+
+.catalog-item__page-content__filter-options__list-option {
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 1px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: 0.5px solid $base-blue;
+  width: 8px;
+  height: 8px;
+
+  &:checked {
+    background: $base-blue;
+  }
+}
+
+.catalog-item__page-content__filter-options__option {
+  @include fontz('Geometria', 400, 14px);
+  color: $base-dark;
+}
+
+.catalog-item__page-content__sidebar-wrap.deskHidden {
+  position: absolute;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  top: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  transition: all .4s ease;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .catalog-item__page-content__sidebar {
+    width: 75%;
+    border: .5px solid #000;
+  }
+}

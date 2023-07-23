@@ -12,7 +12,7 @@ export const LtnsSec = () => {
                     <div className='ltns-list'>
                         {
                             ltnsList.map((item, ind) => (
-                                <LtnsItem {...item} />
+                                <LtnsItem key={ind} {...item} />
                             ))
                         }
                     </div>

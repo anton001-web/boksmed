@@ -3,8 +3,8 @@ import React from 'react'
 
 export const CWrap = ({children}) => {
     return (
-        <div className='content'>
+        <>
             {children}
-        </div>
+        </>
     )
 }

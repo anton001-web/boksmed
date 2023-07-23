@@ -1,0 +1,125 @@
+.footer {
+  margin-top: $sts;
+  background: #232323;
+}
+
+.footer-body {
+  padding: 50px $default-gap-sides;
+}
+
+.footer-content__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+.footer-leftSide {
+  display: flex;
+}
+
+.footer-mediaList {
+  margin-top: 30px;
+  display: flex;
+
+  img {
+    width: 21px;
+    height: 21px;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-links__list {
+  margin-left: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+
+  &-item {
+    @include fontz('Geometria', 400, 14px);
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-compInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+.footer-callback__btn {
+  @include fontz('Geometria', 400, 14px);
+  color: #fff;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.footer-address {
+  @include fontz('Geometria', 400, 14px);
+  color: #fff;
+
+  span {
+    display: block;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.footer-compInfo__othIn {
+  @include fontz('Geometria', 400, 14px);
+  color: #fff;
+}
+
+.footer-compInfo__title {
+  margin-bottom: 21px;
+  display: block;
+}
+
+.footer-compInfo__text {
+
+
+  &-item {
+    margin-bottom: 8px;
+    display: block;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-btns__block {
+  display: flex;
+  justify-content: end;
+  margin-top: 40px;
+}
+
+.footer-callback__downBtn, .footer-goTop__btn {
+  @extend %base-btn;
+  padding: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

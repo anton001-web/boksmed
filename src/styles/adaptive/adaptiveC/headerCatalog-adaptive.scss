@@ -1,0 +1,26 @@
+@media screen and (max-width: 996px) {
+  .header-catalog {
+    grid-template-columns: 250px minmax(min-content, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-catalog__list-item {
+    padding: 10px;
+  }
+
+  .header-catalog__variants-wrap {
+    padding: 80px 10px 10px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-catalog__list-item, .header-catalog__variants-list__item {
+    font-size: 12px;
+  }
+
+  .header-catalog {
+    min-height: 400px;
+    grid-template-columns: 1fr 1fr;
+  }
+}

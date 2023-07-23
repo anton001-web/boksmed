@@ -15,11 +15,12 @@
   }
 }
 
-.ltns-list {
+@media screen and (max-width: 520px) {
+  .ltns-list {
     grid-template-columns: 1fr;
-  }
 
-  .ltns-list__item-img {
-    height: 80px;
+    &__item-img {
+      height: 140px;
+    }
   }
 }

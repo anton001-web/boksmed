@@ -1,23 +1,26 @@
 import React from 'react'
-import {CWrap} from "./components/CWrap";
 import {Header} from "./components/header/Header";
-import {HeroSection} from "./components/heroSection/HeroSection";
-import {MedeqpSec} from "./components/medeqpSec/MedeqpSec";
-import {NvsSection} from "./components/nvsSection/NvsSection";
-import {BfmSec} from "./components/bfmSec/BfmSec";
-import {LtnsSec} from "./components/ltnsSec/LtnsSec";
+import {Footer} from "./components/footer/Footer";
+import {Navigate, Route, Routes, useLocation} from "react-router-dom";
+import {HomeP} from "./components/pages/home/HomeP";
+import {CatalogP} from "./components/pages/catalog/CatalogP";
+import {CatalogItemPage} from "./components/pages/catalogItemP/CatalogItemPage";
 
 export const App = () => {
+    const loc = useLocation()
+
     return (
         <>
-            <Header />
-            <CWrap>
-                <HeroSection />
-                <MedeqpSec />
-                <NvsSection />
-                <BfmSec />
-                <LtnsSec />
-            </CWrap>
+            {loc.pathname === '/' && <Navigate to='/glavnaya'/>}
+            <Header/>
+                <div className="content">
+                    <Routes>
+                        <Route path={'/glavnaya'} element={<HomeP/>}/>
+                        <Route path={'/glavnaya/katalog'} element={<CatalogP/>}/>
+                        <Route path={'/glavnaya/katalog/:catalogItem'} element={<CatalogItemPage/>}/>
+                    </Routes>
+                </div>
+            <Footer/>
         </>
     )
 }

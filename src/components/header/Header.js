@@ -1,15 +1,30 @@
-import React, {useState} from 'react'
+import React, {createRef, useEffect, useRef, useState} from 'react'
 import {HeaderLink} from "./HeaderLink";
 import {HeaderAdtlItem} from "./HeaderAdtlItem";
 import Select from "react-select";
 import {adtlItemsList, links, selectItems} from "./headerData";
+import {useDispatch, useSelector} from "react-redux";
+import {hCatalogToggle} from "../../store/actions";
+import {HeaderCatalog} from "../headerCatalog/HeaderCatalog";
 
 export const Header = () => {
     const [selectedOpt, setSelectedOpt] = useState(null)
+    const hCatalogBtn = createRef()
+    const dispatch = useDispatch()
 
     const handleChange = (option) => {
         setSelectedOpt(option)
     }
+
+    const {visibility} = useSelector(store => {
+        return store.hCatalog
+    })
+
+    useEffect(() => {
+        hCatalogBtn.current.addEventListener('click', () => {
+            dispatch(hCatalogToggle())
+        })
+    }, [hCatalogBtn.current])
 
     return (
         <header className="header">
@@ -17,7 +32,7 @@ export const Header = () => {
                 <div className="header-body">
                     <div className='header-upperBlock'>
                         <img className='header-upBlock__logo header-upperBlock__item' src="../assets/images/headerIcons/Hlogo.svg" alt=""/>
-                        <div className='header-upBlock__ctlg-btn header-upperBlock__item'>
+                        <div className='header-upBlock__ctlg-btn header-upperBlock__item' ref={hCatalogBtn}>
                             <div className='header-ctlg__btn-ico'>
                                 <div className='header-ctlg__btn-ico__line'></div>
                                 <div className='header-ctlg__btn-ico__line'></div>
@@ -40,6 +55,7 @@ export const Header = () => {
                             <img className='header-upBlock__icons-list__item' src="../assets/images/headerIcons/tgIco.svg" alt="tg-ico__link"/>
                             <img className='header-upBlock__icons-list__item' src="../assets/images/headerIcons/waIco.svg" alt="wa-ico__link"/>
                         </div>
+                        {visibility && <HeaderCatalog />}
                     </div>
                     <div className="header-bottomBlock">
                         <div className='header-bottomBlock__links-list'>

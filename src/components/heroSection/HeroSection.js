@@ -15,6 +15,7 @@ export const HeroSection = () => {
                         loop={true}
                         className='hero-section__swiper'
                         modules={[Navigation]}
+                        spaceBetween={70}
                         navigation={{
                             nextEl: '.hero-section__swiper-slide__nav-navigation-slider-btn__next',
                             prevEl: '.hero-section__swiper-slide__nav-navigation-slider-btn__prev'

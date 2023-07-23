@@ -1,8 +1,8 @@
 import React from 'react'
 import {Swiper, SwiperSlide} from "swiper/react";
-import {NvsItem} from "./NvsItem";
 import {nvsData} from "./nvsData";
 import {Navigation} from "swiper";
+import {CustomGoodsItem} from "../custom/customGoodsItem/CustomGoodsItem";
 
 export const NvsSection = () => {
 
@@ -40,7 +40,7 @@ export const NvsSection = () => {
                             {
                                 nvsData.map((item, ind) => (
                                     <SwiperSlide key={ind} className='nvs-body__swiper-slide' >
-                                        <NvsItem slide={item} />
+                                        <CustomGoodsItem key={ind} item={item} />
                                     </SwiperSlide>
                                 ))
                             }

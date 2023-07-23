@@ -67,7 +67,11 @@
 }
 
 @media screen and (max-width: 440px) {
-  .header-bottomBlock__adtl-pgs__list-item[data-val='Сравнения'] {
+  .header-bottomBlock__adtl-pgs__list-item[data-val='Сравнения'], .header-bottomBlock__adtl-pgs__list-item[data-val='Корзина'] {
     display: none;
+  }
+
+  .header-upperBlock__item {
+    margin-right: 0 !important;
   }
 }

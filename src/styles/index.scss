@@ -10,9 +10,17 @@
 @import "nvsSec";
 @import "bfmSec";
 @import "ltnsSec";
+@import "footer";
+
+@import 'pages/catalogP';
+@import 'pages/catalogItemP';
+
+@import "custom/breadcrumb";
+@import "custom/catalogItem";
+@import "oth/headerCatalog";
 
 .container {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -20,13 +28,26 @@
   @extend %title-base;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: $body-bg;
 }
 
-@import 'adaptive/header-adaptive';
-@import 'adaptive/heroSec-adaptive';
-@import 'adaptive/medeqpSec-adaptive';
-@import 'adaptive/nvsSec-adaptive';
-@import 'adaptive/bfmSec-adaptive';
-@import 'adaptive/ltnsSec-adaptive';
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+@import 'adaptive/adaptive';
