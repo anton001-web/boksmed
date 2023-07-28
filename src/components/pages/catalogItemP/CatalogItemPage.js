@@ -20,6 +20,8 @@ export const DropdownIndicator = () => {
     );
 };
 
+const noop = () => null
+
 export const CatalogItemPage = () => {
     const params = useParams()
     const loc = useLocation()
@@ -27,7 +29,7 @@ export const CatalogItemPage = () => {
     const sidebar = useRef()
     const [cItemOptions, setCItemOptions] = useState([])
 
-    const [sortType, setSortType] = useState(null)
+    const [sortType, setSortType] = useState(true)
 
     let pageTitle = params.catalogItem.
         replace(/:/, '')
@@ -48,11 +50,21 @@ export const CatalogItemPage = () => {
             sidebar.current.classList.add('visible')
     }
 
-    window.addEventListener('click', (e) => {
-        if(!e.target.classList.contains('sidebarClosableFalse')) {
-            sidebar.current.classList.remove('visible')
+    useEffect(() => {
+        const handleWindowSidebarT = (e) => {
+            if (!e.target.classList.contains('sidebarClosableFalse')) {
+                sidebar.current.classList.remove('visible');
+            }
         }
-    })
+
+        if (sidebar.current) {
+            window.addEventListener('click', handleWindowSidebarT);
+        }
+
+        return () => {
+            window.removeEventListener('click', handleWindowSidebarT);
+        };
+    }, []);
 
     const pageGoods = pageInfo.goods
 
@@ -69,7 +81,27 @@ export const CatalogItemPage = () => {
 
     useEffect(() => {
         filterGoodsByOptions()
-    }, [cItemOptions])
+
+        let arr;
+
+        cItemOptions.length === 0 ? arr = [...pageGoods] : arr = [...filteredPGoods]
+
+        switch (sortType.value) {
+            case 'popular':
+            case 'news':
+                arr = arr.filter(item => sortType.value in item)
+                setFilteredPGoods(arr)
+                break
+            case 'priceInc':
+                arr.sort((a, b) => a.price - b.price);
+                setFilteredPGoods(arr);
+                break
+            case 'priceDec':
+                arr.sort((a, b) => b.price - a.price)
+                setFilteredPGoods(arr)
+                break
+        }
+    }, [cItemOptions, sortType])
 
     const optionHandle = (e) => {
         e.target.checked ?
