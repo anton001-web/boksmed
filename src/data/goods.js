@@ -141,7 +141,157 @@ export const catalogItems = [
                 img: 'assets/images/nvsSimages/nvsSec1.png',
                 rate: 1,
                 type: 'ind-enps',
-                popular: true
+                popular: true,
+                goodsLink: 'avtomaticheskij%20defibrilyator%20&primedic%20&heartsave%20&pad%20',
+                info: {
+                    img: 'assets/images/nvsSimages/def1ItemImg.png',
+                    description: 'Автоматизированный наружный дефибриллятор (АНД) с питанием от неперезаряжаемой батареи',
+                    techCharacts: [
+                        [
+                            'Тип дефибриллятора: автоматический',
+                            'Подача разряда без необходимости подтверждения разрада оператором'
+                        ],
+                        [
+                            'Диапазон энергии разряда (выбирается автоматически):',
+                            '- для взрослых 100 Дж, 150 Дж, 170 Дж, 200 Дж, 300 Дж, 360 Дж',
+                            '- для детей 10 Дж, 15 Дж, 20 Дж, 30 Дж, 50 Дж, 70 Дж, 100 Дж'
+                        ],
+                        [
+                            'Диапазон импеданса пациента, Ом от 25 до 300'
+                        ],
+                        [
+                            'Форма импульса бифазная усеченная экспоненциальная кривая с автоматической компенсацией в зависимости от импеданса пациента'
+                        ],
+                        [
+                            'Тип батареи неперезаряжаемая',
+                            'Ёмкость батареи, мА/ч 4200'
+                        ],
+                        [
+                            'Ресурс работы от новой батареи:',
+                        ],
+                        [
+                            '- в режиме мониторинга не менее 15 часов'
+                        ],
+                        [
+                            '- количество разрядов с энергией 200Дж 400 (каждую минуту выполняется 3 разряда)'
+                        ],
+                        [
+                            '- количество разрядов с энергией 360Дж 200 (каждую минуту выполняется 3 разряда) Срок службы батареи в режиме ожидания до 5 лет',
+                            'Срок службы батареи в режиме ожидания до 5 лет'
+                        ],
+                        [
+                            'Габаритные размеры, мм 219х286x97'
+                        ],
+                        [
+                            'Масса, кг - 2,3'
+                        ]
+                    ],
+                    docs: [
+                        'РУ',
+                        'Брошюра',
+                        'Серия дефибрилляторов HeartSave',
+                        'Письмо авторизации',
+                    ],
+                    reviews: [
+                        {
+                            reviewAuthor: 'Елена',
+                            reviewText: 'У нас молодая клиника. Почитали много информации про разные аппараты. Остановились на нем. Выражаем свое восхищение четкостью , качеством, стоимостью. Илья очень честный, порядочный и по делу. Все время держал нас в курсе. Когда дозреем до более высого уровня, обязательно обратимся к вам!',
+                            reviewRate: 5
+                        },
+                        {
+                            reviewAuthor: 'Елена',
+                            reviewText: 'У нас молодая клиника. Почитали много информации про разные аппараты. Остановились на нем. Выражаем свое восхищение четкостью , качеством, стоимостью. Илья очень честный, порядочный и по делу. Все время держал нас в курсе. Когда дозреем до более высого уровня, обязательно обратимся к вам!',
+                            reviewRate: 5
+                        },
+                        {
+                            reviewAuthor: 'Елена',
+                            reviewText: 'У нас молодая клиника. Почитали много информации про разные аппараты. Остановились на нем. Выражаем свое восхищение четкостью , качеством, стоимостью. Илья очень честный, порядочный и по делу. Все время держал нас в курсе. Когда дозреем до более высого уровня, обязательно обратимся к вам!',
+                            reviewRate: 5
+                        },
+                        {
+                            reviewAuthor: 'Елена',
+                            reviewText: 'У нас молодая клиника. Почитали много информации про разные аппараты. Остановились на нем. Выражаем свое восхищение четкостью , качеством, стоимостью. Илья очень честный, порядочный и по делу. Все время держал нас в курсе. Когда дозреем до более высого уровня, обязательно обратимся к вам!',
+                            reviewRate: 5
+                        },
+                    ],
+                    videoReview: '../assets/images/goodsItemPImages/videoReviewImg.png',
+                    concomitantGoods: [
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        },
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        },
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        },
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        }
+                    ],
+                    recommendedGoods: [
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        },
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        },
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        },
+                        {
+                            vCode: '97530',
+                            title: 'Автоматический дефибрилятор primedic heartsave pad',
+                            price: 136000,
+                            img: 'assets/images/nvsSimages/nvsSec1.png',
+                            rate: 1,
+                            type: 'ind-enps',
+                            popular: true,
+                        }
+                    ]
+                }
             },
             {
                 vCode: '97531',
@@ -150,7 +300,7 @@ export const catalogItems = [
                 img: 'assets/images/nvsSimages/nvsSec1.png',
                 rate: 1,
                 type: 'public-buls',
-                news: true
+                news: true,
             },
             {
                 vCode: '97532',
@@ -159,7 +309,7 @@ export const catalogItems = [
                 img: 'assets/images/nvsSimages/nvsSec1.png',
                 rate: 1,
                 type: 'public-buls',
-                popular: true
+                popular: true,
             },
             {
                 vCode: '97533',
@@ -167,7 +317,7 @@ export const catalogItems = [
                 price: 13000,
                 img: 'assets/images/nvsSimages/nvsSec1.png',
                 rate: 1,
-                type: 'public-buls'
+                type: 'public-buls',
             },
             {
                 vCode: '97534',
@@ -176,7 +326,7 @@ export const catalogItems = [
                 img: 'assets/images/nvsSimages/nvsSec1.png',
                 rate: 1,
                 type: 'public-buls',
-                news: true
+                news: true,
             }
         ],
         filterOptions: [

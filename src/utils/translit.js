@@ -6,7 +6,7 @@ export const translit = (word) => {
         'e': 'е', 'z': 'з', 'i': 'и', 'yi': 'й', 'k': 'к',
         'l': 'л', 'm': 'м', 'n': 'н', 'o': 'о', 'p': 'п',
         'r': 'р', 's': 'с', 't': 'т', 'u': 'у', 'f': 'ф',
-        'h': 'х', 'c': 'ц', 'y': 'ы',
+        'h': 'х', 'c': 'ц', 'y': 'ы', 'j': 'й'
     }
 
     for(const [key, val] of Object.entries(wordsList)) {

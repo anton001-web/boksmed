@@ -1,0 +1,16 @@
+.goods-item__info-block__wrap {
+  padding: 50px 60px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(50, 87, 164, 0.25) inset;
+  margin-top: 70px;
+
+  @media screen and (max-width: 600px) {
+    padding: 20px;
+  }
+}
+
+.goods-item__info-block__title {
+  @include fontz('Geometria', 500, 20px);
+  color: $base-blue;
+}

@@ -1,23 +1,53 @@
+.breadcrumb-navigation__container {
+  white-space: nowrap;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.breadcrumb-navigation__scroll-container {
+  overflow: hidden;
+}
+
+.breadcrumb-navigation__content-body {
+  height: 100%;
+  overflow: auto;
+}
+
+.breadcrumb-navigation__content-body::-webkit-scrollbar {
+  display: none;
+}
+
 .breadcrumb-navigation {
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-wrap: nowrap;
 
   &__item {
+    white-space: nowrap;
     text-transform: capitalize;
     @include fontz('Geometria', 400, 14px);
     color: $base-dark;
     text-decoration: none;
-    margin-right: 12px;
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width: 3450px) {
       font-size: 13px;
       margin-right: 10px;
     }
 
-    img {
+    svg {
       margin-left: 5px;
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
     }
   }
 }
 
+.Breadcrumbs-module__breadcrumbsItemIcon___1zgn1 {
+  width: 15px;
+  height: 15px;
+}

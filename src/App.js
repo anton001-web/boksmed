@@ -5,6 +5,7 @@ import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import {HomeP} from "./components/pages/home/HomeP";
 import {CatalogP} from "./components/pages/catalog/CatalogP";
 import {CatalogItemPage} from "./components/pages/catalogItemP/CatalogItemPage";
+import {GoodsItemPage} from "./components/pages/goodsItemPage/GoodsItemPage";
 
 export const App = () => {
     const loc = useLocation()
@@ -18,6 +19,7 @@ export const App = () => {
                         <Route path={'/glavnaya'} element={<HomeP/>}/>
                         <Route path={'/glavnaya/katalog'} element={<CatalogP/>}/>
                         <Route path={'/glavnaya/katalog/:catalogItem'} element={<CatalogItemPage/>}/>
+                        <Route path={'/glavnaya/katalog/:catalogItem/:katalogItem'} element={<GoodsItemPage/>}/>
                     </Routes>
                 </div>
             <Footer/>
