@@ -241,3 +241,32 @@
     }
   }
 }
+
+.goods-item__video-review__block {
+  margin-top: 35px;
+  border-radius: 15px;
+  border: 1px solid #3257A4;
+  width: fit-content;
+
+  img {
+    border-radius: 15px;
+  }
+}
+
+.goods-item__concomitant-items__wrap, .goods-item__recommended-items__wrap {
+  margin-top: 80px;
+}
+
+.goods-item__concomitant-items__title, .goods-item__recommended-items_title {
+  @include fontz('Geometria', 700, 24px);
+  color: $base-blue;
+  text-align: center;
+
+  @media screen and (max-width: 520px) {
+    font-size: 20px;
+  }
+}
+
+.goods-item__concomitant-items__swiper {
+  margin-top: 35px;
+}

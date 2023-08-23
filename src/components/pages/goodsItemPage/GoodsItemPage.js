@@ -4,6 +4,8 @@ import {catalogItems} from "../../../data/goods";
 import {Breadcrumb} from "../../custom/breadcrumb/Breadcrumb";
 import {goodsInfo__items} from "../../../data/goods-info__items";
 import {GoodsItemInfoBlockWrap} from "../../custom/goodsItemInfoBlockWrap/GoodsItemInfoBlockWrap";
+import {CustomGoodsItem} from "../../custom/customGoodsItem/CustomGoodsItem";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 
 export const GoodsItemPage = () => {
@@ -137,7 +139,72 @@ export const GoodsItemPage = () => {
                             </ul>
                         </div>
                     </GoodsItemInfoBlockWrap>
+                    <GoodsItemInfoBlockWrap title='Видеобзор'>
+                        <div className='goods-item__video-review__block'>
+                            <img src="../assets/images/goodsItemPImages/videoReviewImg.png" alt="goods-item__video-review-img"/>
+                        </div>
+                    </GoodsItemInfoBlockWrap>
+                    <div className='goods-item__concomitant-items__wrap'>
+                        <h1 className='goods-item__concomitant-items__title'>Сопутствующие товары</h1>
+                        <Swiper
+                            className='goods-item__concomitant-items__swiper'
+                            slidesPerView={1}
+                            loop={false}
+                            spaceBetween={25}
+                            breakpoints={{
+                                520: {
+                                    slidesPerView: 2,
+                                },
+                                767: {
+                                    slidesPerView: 3,
+                                },
+                                996: {
+                                    slidesPerView: 4,
+                                }
+                            }}
+                        >
+                            {
+                                itemContent.info.concomitantGoods.map((cItem, ind) => (
+                                    <SwiperSlide key={ind}>
+                                        <CustomGoodsItem
 
+                                            item={cItem}
+                                        />
+                                    </SwiperSlide>
+                                ))
+                            }
+                        </Swiper>
+                    </div>
+                    <div className="goods-item__recommended-items__wrap">
+                        <h1 className='goods-item__recommended-items_title'>Рекомендованные товары</h1>
+                        <Swiper
+                            className='goods-item__recommended-items__swiper'
+                            slidesPerView={1}
+                            loop={false}
+                            spaceBetween={25}
+                            breakpoints={{
+                                520: {
+                                    slidesPerView: 2,
+                                },
+                                767: {
+                                    slidesPerView: 3,
+                                },
+                                996: {
+                                    slidesPerView: 4,
+                                }
+                            }}
+                        >
+                            {
+                                itemContent.info.recommendedGoods.map((rItem, ind) => (
+                                    <SwiperSlide key={ind}>
+                                        <CustomGoodsItem
+                                            item={rItem}
+                                        />
+                                    </SwiperSlide>
+                                ))
+                            }
+                        </Swiper>
+                    </div>
                 </div>
             </div>
         </section>
